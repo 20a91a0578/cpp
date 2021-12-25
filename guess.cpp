@@ -5,19 +5,22 @@ int main()
 {
 	char s[20],g[20],p;
 	int i,j,n=3,k,count=0,c=0;
-    cout<<"enter guessing string";
+	string a;
+    cout<<"ENTER THE STRING YOU WANT TO USE FOR GUESSING GAME :";
 	cin>>g;
+		cout<<"Enter the Clue You Want to Give To Player";
+	cin>>a;
 	k=strlen(g);
 for(i=0;i<k;i++)
 {
 	s[i]='*';
 }
 s[i]='\0';
-cout<<"output :"<<s<<endl;
+cout<<"THE STRING YOU ENTERED IS IN THE THE FORMAT:"<<s<<endl;
 while(n>0&&c!=k)
 {
 	count=0;
-	cout<<"Enter your character:";
+	cout<<"Enter Your Guessing Letter:";
 	cin>>p;
 	for(j=0;j<k+1;j++)
 	{
@@ -30,13 +33,14 @@ while(n>0&&c!=k)
     }
 if (count==0)
 {	
-cout<<"sorry! the character is not existing. you still have "<<n-1<<" chances"<<endl;
+cout<<"Sorry! The Letter You Entered Doesn`t Match With Any Letter in the String"<<endl;
+cout<<"Now You Have only "<<n-1<<" Chances to Win The Game"<<endl;
 n--;
 		
 }
 else 
 {
-cout<<"output :"<<s<<endl;
+cout<<"The String After Your GUESS:"<<s<<endl;
 }
 }	
 
